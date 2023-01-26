@@ -1,0 +1,70 @@
+.cnChangeProfileModal {
+   outline: none;
+}
+
+.cnChangeProfileModalOverlay {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cnChangeProfileModalRoot {
+   position: relative;
+   background-color: #fff;
+   padding: 3.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 800px;
+   height: 540px;
+   border-radius: 15px;
+   font-size: 15px;
+}
+
+.change-profile-textarea {
+   resize: none;
+   outline: none;
+   border: 1px solid #ccc;
+   font-size: 15px;
+   display: flex;
+   margin-bottom: 10px;
+   min-height: 2rem;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+.add-info-textarea {
+   min-height: 60px;
+   white-space: pre-line;
+}
+
+.close-change-profile-button {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   width: 2.1rem;
+   height: 2.1rem;
+   cursor: pointer;
+}
+
+.cnChangeProfileConfirm {
+   align-self: end;
+   padding: 10px;
+   border: none;
+   border-radius: 15px;
+   font-size: 20px;
+   font-weight: 500;
+   color: #fff;
+   background-image: linear-gradient(to top left, #39b385, #9be15d);
+   cursor: pointer;
+}
+
+.cnLink1 {
+   margin-top: 8px;
+}

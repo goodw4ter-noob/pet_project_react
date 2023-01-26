@@ -1,0 +1,174 @@
+.cnUserBadgeRoot {
+   display: flex;
+   margin-right: 40px;
+   flex-direction: column;
+   align-items: center;
+   height: 90%;
+   position: relative;
+   background-color: #fafafa;
+   /* border: 1px solid red; */
+}
+
+.cnUserBadgeRoot[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.cnUserBadgeRoot[data-theme="dark"] {
+   background-color: rgb(43, 43, 43);
+}
+
+.cnUserBadgeNickName[data-theme="light"] {
+   color: black;
+}
+
+.cnUserBadgeNickName[data-theme="dark"] {
+   color: #fff;
+}
+
+.cnUserBadgeArrow[data-theme="light"] {
+   color: black;
+}
+
+.cnUserBadgeArrow[data-theme="dark"] {
+   color: #fff;
+}
+
+.cnUserBadgeRow {
+   display: flex;
+}
+
+.cnUserBadgeProfilePhoto {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+}
+
+.cnUserBadgeNickName {
+   font-size: 1.3em;
+}
+
+.cnUserBadgeInner {
+   margin-left: 9px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.fa-arrow-down {
+   transition: 0.3s;
+   margin-left: 5px;
+   font-size: 1.3em;
+   cursor: pointer;
+}
+
+.rotate {
+   transform: rotate(180deg);
+}
+
+.cnUserBadgeProfileMenu {
+   width: 150px;
+   list-style: none;
+   padding: 0.2em 0.5em;
+   box-shadow: 0 0 6px rgb(59, 59, 59);
+   border-radius: 0.5em;
+   transition: 0.3s;
+   z-index: 1;
+   font-size: 17px;
+   font-size: 15px;
+}
+
+.cnUserBadgeProfileMenuDark {
+   box-shadow: 0 0 6px rgb(255, 255, 255);
+   border-radius: 15px;
+   border: 1px solid #fff;
+}
+
+.cnUserBadgeProfileMenu li {
+   padding: 0.7em 0.5em;
+   margin: 0.3em 0;
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+.hidden {
+   display: none;
+}
+
+.cnUserBadgeModal {
+   position: absolute;
+   right: 20px;
+   top: 0;
+   outline: none;
+   transition: 0.3s;
+   pointer-events: auto;
+}
+
+.cnUserBadgeModalOverlay {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   top: 65px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   /* pointer-events: auto; */
+}
+
+.cnUserBadgeSwitchThemeLabel {
+   display: inline-block;
+   position: relative;
+   width: 47px;
+   height: 27px;
+}
+
+.cnUserBadgeSwitchTheme {
+   height: 0;
+   width: 0;
+   opacity: 0;
+}
+
+.cnUserBadgeSlider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #ccc;
+   border-radius: 34px;
+   transition: all 0.4s;
+}
+
+.cnUserBadgeSlider::before {
+   content: "";
+   position: absolute;
+   cursor: pointer;
+   left: 4px;
+   bottom: 4px;
+   height: 19px;
+   width: 19px;
+   border-radius: 50%;
+   background-color: #fff;
+   transition: all 0.4s;
+}
+
+.cnUserBadgeSwitchTheme:focus + .cnUserBadgeSlider {
+   box-shadow: 0 0 1px #2196f3;
+}
+
+.cnUserBadgeSwitchTheme:checked + .cnUserBadgeSlider {
+   background-color: #2196f3;
+}
+
+.cnUserBadgeSwitchTheme:checked + .cnUserBadgeSlider::before {
+   transform: translateX(19px);
+}
+
+.cnUserBadgeTheme {
+   margin-right: 13px;
+}
+
+.cnUserBadgeThemeDark {
+   color: #fff;
+}

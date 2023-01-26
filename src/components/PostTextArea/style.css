@@ -1,0 +1,90 @@
+.cnPostTextAreaRoot {
+   width: 840px;
+   height: 100px;
+   display: flex;
+   position: relative;
+   border-radius: 15px;
+   background-color: #fff;
+   border: 1px solid gainsboro;
+}
+
+.cnPostTextAreaRoot[data-theme="dark"] {
+   background-color: rgb(43, 43, 43);
+   color: #fff;
+}
+
+.cnPostTextAreaRoot[data-theme="light"] {
+   color: black;
+   background-color: #fff;
+}
+
+.cnPostTextAreaMainArea[data-theme="dark"] {
+   background-color: rgb(43, 43, 43);
+   color: #fff;
+}
+
+.cnPostTextAreaMainArea[data-theme="light"] {
+   color: black;
+   background-color: #fff;
+}
+
+.cnPostTextAreaFileButton[data-theme="dark"] {
+   background-color: #fff;
+   border-radius: 15px;
+}
+
+.cnPostTextAreaFileButton[data-theme="light"] {
+   background-color: #fff;
+}
+
+.cnPostTextAreaMain {
+   width: 100%;
+   position: relative;
+}
+
+.cnPostTextAreaMainArea {
+   width: 90%;
+   height: 83px;
+   resize: none;
+   border: none;
+   border-radius: 15px;
+   outline: none;
+   padding: 7px;
+}
+
+.cnPostImgToInsert {
+   position: absolute;
+   right: 80px;
+   bottom: 5px;
+}
+
+.cnPostTextAreaButton {
+   position: absolute;
+   bottom: 10px;
+   right: 5px;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   max-width: 60px;
+}
+
+.cnPostTextAreaSendBtn {
+   cursor: pointer;
+   background-image: linear-gradient(to top left, #39b385, #9be15d);
+   border: 2px solid #fff;
+   border-radius: 15px;
+   color: #fff;
+}
+
+.cnPostTextAreaFileButton {
+   cursor: pointer;
+}
+
+.addFileIcon {
+   width: 35px;
+   height: 35px;
+}
+
+.cnPostTextAreaFile {
+   display: none;
+}

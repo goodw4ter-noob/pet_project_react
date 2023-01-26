@@ -1,0 +1,134 @@
+.cnPostModal {
+   outline: none;
+}
+
+.cnModalOverlay {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cnPostModalRoot {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: #fff;
+   padding: 30px;
+   width: 800px;
+   height: 700px;
+   border-radius: 15px;
+   z-index: 2;
+}
+
+.cnModalCloseButton {
+   display: flex;
+   justify-content: start;
+}
+
+.cnNewPostModalTextArea {
+   height: 250px;
+   width: 800px;
+}
+
+.cnPostTextArea {
+   font-size: 20px;
+   width: 97%;
+   height: 90%;
+   padding: 10px;
+   border-radius: 15px;
+   word-wrap: break-word;
+   resize: none;
+   border: 1px solid #ccc;
+   outline: none;
+}
+
+.cnPostText {
+   display: flex;
+   align-items: center;
+}
+
+.cnModalSendBtn {
+   display: flex;
+   justify-content: end;
+}
+
+.cnModalCloseFormButton {
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+}
+
+.cnModalSend {
+   width: 150px;
+   padding: 1.5rem;
+   border: 2px solid #fff;
+   border-radius: 15px;
+   font-size: 20px;
+   font-weight: 500;
+   color: #fff;
+   cursor: pointer;
+   background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.cnCommentsPostData {
+   border-bottom: 1px solid gainsboro;
+   position: relative;
+}
+
+.cnCommentsPostDataLikeBtn {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+.cnCommentsPostDataImg {
+   object-fit: cover;
+   margin-right: 5px;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+}
+
+.cnComments {
+   max-height: 120px;
+}
+
+.cnCommentsScroll {
+   height: 120px;
+   overflow: auto;
+}
+
+.cnPostUserText {
+   display: flex;
+   margin-left: 10px;
+   margin-top: 15px;
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.cnPostUserName {
+   font-weight: 500;
+   font-size: 20px;
+}
+
+.cnPostUserNameComment {
+   color: #0b58c3;
+   font-weight: 500;
+   font-size: 15px;
+}
+
+.cnBodyOverFlow {
+   overflow: hidden;
+}
+
+.hidden {
+   display: none;
+}
+

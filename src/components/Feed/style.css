@@ -1,0 +1,61 @@
+.cnFeedRoot {
+   margin-top: 10px;
+   border: 3px solid #30bb60;
+   border-radius: 1rem;
+}
+
+.cnFeedRoot[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.cnFeedRoot[data-theme="dark"] {
+   background-color: rgb(48, 48, 48);
+}
+
+.main-page-messages[data-theme="light"] {
+   background-color: #fafafa;
+   color: black;
+}
+
+.main-page-messages[data-theme="dark"] {
+   background-color: rgb(48, 48, 48);
+   color: #fff;
+}
+
+.container-msg {
+   min-height: 75vh;
+   max-height: 76vh;
+   overflow-y: scroll;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+
+.main-page-messages {
+   background-color: #fff;
+}
+
+.panel-btn {
+   display: flex;
+   margin-left: 3px;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+}
+
+.panel-btn:hover {
+   transition: all 0.3s ease;
+   background-color: rgb(227, 227, 227);
+   border-radius: 10px;
+}
+
+.top-panel {
+    position: static;
+    display: flex;
+    justify-content: end;
+    background-color: #eee;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 5px;
+    align-items: center;
+    max-height: 38px;
+ }

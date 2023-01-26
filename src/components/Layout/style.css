@@ -1,0 +1,31 @@
+.cnLayoutRoot {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   height: 100vh;
+}
+
+.cnLayoutBody {
+   max-width: 1080px;
+   display: flex;
+   margin: auto;
+   margin-top: 10px;
+}
+
+.cnLayoutRoot[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.cnLayoutRoot[data-theme="dark"] {
+   background-color: rgb(48, 48, 48);
+}
+
+.cnLayoutBody[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.cnLayoutBody[data-theme="dark"] {
+   background-color: rgb(48, 48, 48);
+}

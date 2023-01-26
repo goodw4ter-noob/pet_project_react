@@ -1,0 +1,158 @@
+.message-row {
+   padding: 1.5rem 1.5rem;
+   display: flex;
+   flex-direction: row;
+   max-width: 100%;
+   word-wrap: break-word;
+   border-bottom: 1px solid #eee;
+}
+
+.message-row[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.message-row[data-theme="dark"] {
+   background-color: rgb(48, 48, 48);
+}
+
+.message-row-name[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.message-row-name[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.message-row-date[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.message-row-date[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.message-row-text[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.message-row-text[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.cnPostLikesNumber[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.cnPostLikesNumber[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.cnPostCommentNumber[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.cnPostCommentNumber[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.cnPostComments[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.cnPostComments[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.cnPostLikeBtn[data-theme="light"] {
+   color: rgb(0, 0, 0);
+}
+
+.cnPostLikeBtn[data-theme="dark"] {
+   color: #ffffff;
+}
+
+.message-row-wrapper {
+   display: flex;
+   flex-direction: column;
+   width: 97%;
+}
+
+.message-row-date {
+   position: absolute;
+   right: 20px;
+}
+
+.cnPostUserInfo {
+   display: flex;
+   align-items: center;
+}
+
+.cnPostPhoto {
+   display: flex;
+   margin: auto;
+   margin-top: 5px;
+   width: 400px;
+   height: 400px;
+   border-radius: 15px;
+   object-fit: cover;
+}
+
+.cnPostLikeComment {
+   display: flex;
+   margin: auto;
+   margin-top: 10px;
+   width: 200px;
+   justify-content: space-between;
+}
+
+.cnPostUserInfoImg {
+   display: flex;
+   margin-right: 5px;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+
+.message-raw-block {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   margin-bottom: 3px;
+   font-size: 15px;
+   /* border: 1px solid red; */
+}
+
+.message-row-delete-post-btn {
+   min-width: 20px;
+   max-height: 20px;
+   cursor: pointer;
+}
+
+.message-row-text {
+   font-size: 18px;
+   font-weight: 500;
+   white-space: pre-line;
+}
+
+.cnPostLikesNumber {
+   margin-left: 5px;
+}
+
+.cnPostLikeBtn {
+   cursor: pointer;
+}
+
+.cnPostCommentNumber {
+   margin-left: 5px;
+}
+
+.cnPostComments {
+   cursor: pointer;
+}
+
+.cnCommentModalWindow {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   flex-direction: column;
+}

@@ -1,0 +1,76 @@
+.cnNavBarRoot {
+   display: flex;
+   position: relative;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+   width: 100%;
+   border-bottom: 1px solid #ccc;
+}
+
+.cnNavBarRoot[data-theme="light"] {
+   background-color: #fafafa;
+}
+
+.cnNavBarRoot[data-theme="dark"] {
+   background-color: rgb(43, 43, 43);
+}
+
+.cnNavBarWelcomePhrase {
+   margin-left: 30px;
+   font-size: 1.9rem;
+   font-weight: 500;
+   color: #4070f4;
+}
+
+.cnNavBarLogo {
+   display: flex;
+   justify-content: center;
+   width: 55px;
+   height: 55px;
+}
+
+.cnNavBarLink {
+   position: absolute;
+   left: 50%;
+}
+
+.cnNavBarInput {
+   border: none;
+   padding: 0.5rem 2rem;
+   font-size: 1.2rem;
+   font-family: inherit;
+   text-align: center;
+   width: 7rem;
+   border-radius: 10rem;
+   margin-right: 1rem;
+   border: 1px solid #fff;
+   transition: all 0.3s;
+}
+
+.cnNavBarInput:focus {
+   outline: none;
+   border: 1px solid #ccc;
+}
+
+.cnNavBarInput::placeholder {
+   color: #bbb;
+}
+
+.cnNavBarButton {
+   border: none;
+   background: none;
+   font-size: 2rem;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.cnNavBarLoginForm {
+   display: flex;
+   flex-direction: row;
+   margin-right: 20px;
+}
+
+.hidden {
+   display: none;
+}

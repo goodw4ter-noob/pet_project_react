@@ -1,0 +1,14 @@
+.cnWelcomePhraseRoot {
+   margin-left: 30px;
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: #4070f4;
+}
+
+.cnWelcomePhraseRoot[data-theme="light"] {
+    color: #4070f4;
+ }
+ 
+ .cnWelcomePhraseRoot[data-theme="dark"] {
+    color: #fafafa;
+ }
