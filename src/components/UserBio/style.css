@@ -114,8 +114,6 @@
    background-color: #ccc;
 }
 
-
-
 .cnUserBioHideInfoBtn {
    position: absolute;
    cursor: pointer;
@@ -130,4 +128,22 @@
 
 .cnUserBioShowInfoBtn.hidden {
    display: none;
+}
+
+.cnUserBioGoToMessenger {
+   display: flex;
+   margin-top: 10px;
+   border: none;
+   border-radius: 15px;
+   padding: 5px;
+   background-image: linear-gradient(to top left, #39b385, #9be15d);
+   color: #fff;
+   font-size: 19px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.cnUserBioGoToMessenger:active {
+   transition: 0.3s;
+   background-image: linear-gradient(to top left, #2c8965, #82be4f);
 }

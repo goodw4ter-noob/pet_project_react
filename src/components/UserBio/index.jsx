@@ -1,11 +1,13 @@
 import classNames from 'classnames';
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import ChangeProfileModal from '../ChangeProfileModal';
 import './style.css'
 
 
 const UserBio = ({ onEdit }) => {
+    const navigate = useNavigate();
     const [isChangeProfileModalVisible, setIsChangeProfileModalVisible] = useState(false);
     const [isDetailsShown, setIsDetailsShown] = useState(false);
     const user = useSelector(state => state.users.authorizedUser);
@@ -56,6 +58,7 @@ const UserBio = ({ onEdit }) => {
             </div>
             <span className={`${isDetailsShown ? 'cnUserBioShowInfoBtn hidden' : 'cnUserBioShowInfoBtn'}`} onClick={() => setIsDetailsShown(true)}>more details...</span>
             {toggleDetails()}
+            <button className='cnUserBioGoToMessenger' onClick={() => navigate('/messenger')}>My messages</button>
             <ChangeProfileModal
                 onEdit={onEdit}
                 user={user}

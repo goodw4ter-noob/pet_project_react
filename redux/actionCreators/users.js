@@ -10,6 +10,30 @@ export const MUTATE_USER_STARTED = 'MUTATE_USER_STARTED';
 export const MUTATE_USER_SUCCESS = 'MUTATE_USER_SUCCESS';
 export const MUTATE_USER_FAILED = 'MUTATE_USER_FAILED';
 
+export const GET_FRIEND_STARTED = 'GET_FRIEND_STARTED';
+export const GET_FRIEND_SUCCESS = 'GET_FRIEND_SUCCESS';
+export const GET_FRIEND_FAILED = 'GET_FRIEND_FAILED';
+
+export const getFriendStarted = function () {
+    return {
+        type: GET_FRIEND_STARTED,
+    }
+};
+
+export const getFriendSuccess = function (user) {
+    return {
+        type: GET_FRIEND_SUCCESS,
+        payload: user,
+    }
+};
+
+export const getFriendFailed = function (error) {
+    return {
+        type: GET_FRIEND_FAILED,
+        payload: error,
+    }
+};
+
 export const getUserStarted = function () {
     return {
         type: GET_USER_STARTED,

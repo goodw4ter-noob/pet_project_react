@@ -1,5 +1,5 @@
 import { api } from '../../src/api';
-import { getUserStarted, getUserSuccess, getUserFailed, getAuthorizedUserStarted, getAuthorizedUserSuccess, getAuthorizedUserFailed, mutateUserStarted, mutateUserSuccess } from '../actionCreators/users';
+import { getUserStarted, getUserSuccess, getUserFailed, getAuthorizedUserStarted, getAuthorizedUserSuccess, getAuthorizedUserFailed, mutateUserStarted, mutateUserSuccess, getFriendStarted, getFriendSuccess, getFriendFailed } from '../actionCreators/users';
 
 export const getUserThunk = function (data) {
     return async function (dispatch) {
@@ -20,23 +20,6 @@ export const getUserThunk = function (data) {
         }
     };
 };
-// export const getUserThunk = function (data) {
-//     return async function (dispatch) {
-//         try {
-//             // console.log(data, 'dataNull');
-//             if (!data.email) return;
-//             // console.log(data, 'data');
-//             dispatch(getUserStarted());
-//             console.log(data, 'data');
-//             const response = await api.users.getUsersAJAX(data);
-//             // console.log(response.data, 'response.data');
-//             dispatch(getUserSuccess(response.data.user));
-//             localStorage.setItem('token', response.data.accessToken);
-//         } catch (error) {
-//             dispatch(getUserFailed(error));
-//         }
-//     };
-// };
 
 export const getAuthorizedUserThunk = function (token) {
     return async function (dispatch) {
@@ -72,6 +55,24 @@ export const mutateUserThunk = function (user, token) {
             dispatch(getAuthorizedUserSuccess(response.data));
         } finally {
             dispatch(getAuthorizedUserFailed());
+        }
+    }
+};
+
+export const getFriendThunk = function (id, token) {
+    return async function (dispatch) {
+        try {
+            dispatch(getFriendStarted());
+
+            const response = await api.users.getFriendAJAX({
+                url: id,
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            console.log(response.data, 'response.data');
+
+            dispatch(getFriendSuccess(response.data));
+        } catch (error) {
+            dispatch(getFriendFailed(error));
         }
     }
 }

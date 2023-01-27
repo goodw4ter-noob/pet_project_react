@@ -1,4 +1,4 @@
-import { GET_USER_STARTED, GET_USER_SUCCESS, GET_USER_FAILED, GET_AUTHORIZED_USER_SUCCESS, GET_AUTHORIZED_USER_STARTED, GET_AUTHORIZED_USER_FAILED, MUTATE_USER_STARTED, MUTATE_USER_SUCCESS } from '../actionCreators/users'
+import { GET_USER_STARTED, GET_USER_SUCCESS, GET_USER_FAILED, GET_AUTHORIZED_USER_SUCCESS, GET_AUTHORIZED_USER_STARTED, GET_AUTHORIZED_USER_FAILED, MUTATE_USER_STARTED, MUTATE_USER_SUCCESS, GET_FRIEND_STARTED, GET_FRIEND_SUCCESS, GET_FRIEND_FAILED } from '../actionCreators/users'
 
 
 const initialState = {
@@ -8,6 +8,8 @@ const initialState = {
     isAuthorizedUserLoading: true,
     isAuthorizedUserError: false,
     isMutateLoading: false,
+    friends: [],
+    isFriendLoading: true,
 };
 
 
@@ -63,6 +65,26 @@ export const getUserReducer = function (state = initialState, action) {
             return {
                 ...state,
                 isMutateLoading: false,
+            }
+
+        case GET_FRIEND_STARTED:
+            return {
+                ...state,
+                friends: [],
+                isFriendLoading: true,
+            }
+
+        case GET_FRIEND_SUCCESS:
+            return {
+                ...state,
+                friends: [...state.friends, action.payload],
+                isFriendLoading: false,
+            }
+
+        case GET_FRIEND_FAILED:
+            return {
+                ...state,
+                isFriendLoading: false,
             }
 
         default:

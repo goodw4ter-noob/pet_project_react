@@ -31,7 +31,7 @@ const ChangeProfileModal = ({ onEdit, setIsChangeProfileModalVisible, user, isCh
             "theme": user.theme,
             "firstName": firstNameValue,
             "lastName": lastNameValue,
-            "img": "https://ru-static.z-dn.net/files/d38/45833edf494ba8dc483de2773abc1bf3.png",
+            "img": user.img,
             "city": cityValue,
             "country": country,
             "flag": flag,
@@ -40,7 +40,8 @@ const ChangeProfileModal = ({ onEdit, setIsChangeProfileModalVisible, user, isCh
                 link2Value
             ],
             "addInfo": addInfo,
-            "id": user.id
+            "id": user.id,
+            "friends": user.friends,
         };
         const token = localStorage.getItem('token');
         onEdit(userInfo, token);

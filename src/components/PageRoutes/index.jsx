@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { getAuthorizedUserThunk } from '../../../redux/actions/users';
+import MessengerPage from '../../pages/MessengerPage';
 import StartPage from '../../pages/StartPage';
 import UserPage from '../../pages/UserPage';
 
@@ -17,6 +18,7 @@ const PageRoutes = () => {
 
     const mainRoutes = [
         { path: '/user', element: <UserPage setToken={setToken} isAuthenticated={isAuthenticated} />, exact: true },
+        { path: '/messenger', element: <MessengerPage setToken={setToken} isAuthenticated={isAuthenticated} />, exact: true },
     ];
 
     useEffect(() => {

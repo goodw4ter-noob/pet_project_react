@@ -36,3 +36,12 @@ export const mutateUserAJAX = function (config) {
         ...config,
     });
 };
+
+export const getFriendAJAX = function (config) {
+    config.url = `usersData/${config.url}`;
+
+    return makeRequest({
+        method: 'GET',
+        ...config
+    });
+};

@@ -1,0 +1,90 @@
+.cnMessengerTextAreaRoot {
+    width: 840px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid gainsboro;
+ }
+ 
+ .cnMessengerTextAreaRoot[data-theme="dark"] {
+    background-color: rgb(43, 43, 43);
+    color: #fff;
+ }
+ 
+ .cnMessengerTextAreaRoot[data-theme="light"] {
+    color: black;
+    background-color: #fff;
+ }
+ 
+ .cnMessengerTextAreaMainArea[data-theme="dark"] {
+    background-color: rgb(43, 43, 43);
+    color: #fff;
+ }
+ 
+ .cnMessengerTextAreaMainArea[data-theme="light"] {
+    color: black;
+    background-color: #fff;
+ }
+ 
+ .cnMessengerTextAreaFileButton[data-theme="dark"] {
+    background-color: #fff;
+    border-radius: 15px;
+ }
+ 
+ .cnMessengerTextAreaFileButton[data-theme="light"] {
+    background-color: #fff;
+ }
+ 
+ .cnMessengerTextAreaMain {
+    width: 100%;
+    position: relative;
+ }
+ 
+ .cnMessengerTextAreaMainArea {
+    width: 90%;
+    height: 83px;
+    resize: none;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 7px;
+ }
+ 
+ .cnMessengerImgToInsert {
+    position: absolute;
+    right: 80px;
+    bottom: 5px;
+ }
+ 
+ .cnMessengerTextAreaButton {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 60px;
+ }
+ 
+ .cnMessengerTextAreaSendBtn {
+    cursor: pointer;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    border: 2px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+ }
+ 
+ .cnMessengerTextAreaFileButton {
+    cursor: pointer;
+ }
+ 
+ .addFileIcon {
+    width: 35px;
+    height: 35px;
+ }
+ 
+ .cnMessengerTextAreaFile {
+    display: none;
+ }
