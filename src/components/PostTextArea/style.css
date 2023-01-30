@@ -71,9 +71,17 @@
 .cnPostTextAreaSendBtn {
    cursor: pointer;
    background-image: linear-gradient(to top left, #39b385, #9be15d);
-   border: 2px solid #fff;
-   border-radius: 15px;
+   border-radius: 10px;
+   padding: 5px;
    color: #fff;
+   border: none;
+   display: flex;
+   margin-top: 5px;
+}
+
+.cnPostTextAreaSendBtn:active {
+   transition: 0.3s;
+   background-image: linear-gradient(to top left, #2c8965, #82be4f);
 }
 
 .cnPostTextAreaFileButton {

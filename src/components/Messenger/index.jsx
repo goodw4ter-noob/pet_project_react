@@ -1,17 +1,17 @@
-import axios from 'axios'
-import classNames from 'classnames'
 import React from 'react'
-import { useRef } from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import MessengerTextArea from '../../components/MessengerTextArea'
+import Message from '../Message'
 import './style.css'
 
-const Messenger = ({ authedUser, isMessages, getMessages, friends }) => {
+const Messenger = ({ setIsMessages, chatId, friendId, isMessages, getMessages, friends }) => {
     const navigate = useNavigate();
-    const cmMessengerTopAreaScroll = useRef();
     const messages = useSelector(state => state.messages.messages);
+    const [msgsToRender, setMsgsToRender] = useState();
+    
 
     const renderFriends = function () {
         return friends.map(el => {
@@ -28,17 +28,7 @@ const Messenger = ({ authedUser, isMessages, getMessages, friends }) => {
 
     useEffect(() => {
         if (!messages.data) return;
-        cmMessengerTopAreaScroll.current.textContent = '';
-        const msgs = messages.data.map(el => {
-            return `
-                <p class='cnMessageUnit ${el.from === authedUser.id ? 'myMessage' : 'notMyMessage'}'>
-                    <span>${el.text}</span>
-                    <span class='cnMessageUnitTime'>${el.time}</span>
-                </p>
-            `;
-        }).join('');
-
-        cmMessengerTopAreaScroll.current.insertAdjacentHTML('beforeend', msgs);
+        setMsgsToRender(messages);
     }, [isMessages]);
 
     return (
@@ -61,13 +51,11 @@ const Messenger = ({ authedUser, isMessages, getMessages, friends }) => {
                 <div className="cnMessengerMainPart">
                     <div className='cnMessengerTopArea'>
                         <div className='cnMessengerTopAreaWrapper'>
-                            <div ref={cmMessengerTopAreaScroll} className='cmMessengerTopAreaScroll'>
-                                
-                            </div>
+                                {msgsToRender && <Message messages={msgsToRender}/>}
                         </div>
                     </div>
                     <div className='cnMessengerBottomArea'>
-                        <MessengerTextArea />
+                        <MessengerTextArea isMessages={isMessages} setIsMessages={setIsMessages} chatId={chatId} friendId={friendId} />
                     </div>
                 </div>
             </div>

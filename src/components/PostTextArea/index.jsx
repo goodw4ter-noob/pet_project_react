@@ -78,7 +78,7 @@ const PostTextArea = ({ changeTheme, updatePage, setUpdatePage, authorizedUser }
 			<form className='cnPostTextAreaButton'>
 				<label ref={cnPostTextAreaFileButton} htmlFor="cnPostTextAreaFileBtn" className='cnPostTextAreaFileButton'><img src="../../../public/icons/add-photo-alternate.svg" className='addFileIcon' alt="icon" /></label>
 				<input onChange={(e) => handleChange(e)} type="file" className='cnPostTextAreaFile' id='cnPostTextAreaFileBtn' />
-				<button onClick={(e) => renderPost(e)} className='cnPostTextAreaSendBtn'>Send</button>
+				<button onClick={(e) => renderPost(e)} className='cnPostTextAreaSendBtn'>Share</button>
 			</form>
 		</div>
 	);

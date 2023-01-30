@@ -125,30 +125,49 @@
    padding-bottom: 10px;
 }
 
+.cnMessageUnitRoot {
+   display: flex;
+   flex-direction: column;
+   max-width: 350px;
+}
+
 .cnMessageUnit {
+   display: flex;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   position: relative;
+   font-size: 13px;
+   padding: 3px;
+   color: #fff;
    min-height: 35px;
    min-width: 70px;
-   max-width: 300px;
-   display: flex;
-   font-size: 13px;
-   justify-content: start;
-   padding: 3px;
+   max-width: max-content ;
+}
+
+.cnMessageUnitText {
    word-wrap: break-word;
-   position: relative;
-   border-radius: 13px;
-   color: #fff;
+   max-width: 300px;
+}
+
+.cnMessageUnitRoot.myMessage .cnMessageUnit {
+   background-image: linear-gradient(to top left, #21a6ff, #81b9d2);
+   border-radius: 13px 0px 13px 13px;
+   align-self: end;
+}
+
+.cnMessageUnitRoot.notMyMessage .cnMessageUnit {
+   background-image: linear-gradient(to top left, #4bc563, #2cbf7d);
+   border-radius: 0px 13px 13px 13px;
 }
 
 .myMessage {
    align-self: end;
    margin-right: 5px;
-   background-image: linear-gradient(to top left, #21a6ff, #81b9d2);
 }
 
 .notMyMessage {
    align-self: start;
    margin-left: 5px;
-   background-image: linear-gradient(to top left, #4bc563, #2cbf7d);
 }
 
 .cnMessageUnitTime {
@@ -156,4 +175,10 @@
    bottom: 4px;
    right: 4px;
    font-size: 10px;
+}
+
+.cnMessageUserImage {
+   max-width: 300px;
+   border-radius: 13px;
+   object-fit: cover;
 }

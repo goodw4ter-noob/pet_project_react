@@ -4,9 +4,10 @@ import './style.css'
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { mutateUserThunk } from '../../../redux/actions/users';
+import { resetMessagesThunk } from '../../../redux/actions/messages';
 
 
 
@@ -34,6 +35,7 @@ const UserBadge = ({ setChangeTheme, navBarRoot, setToken, user, className }) =>
     }
 
     const refreshPage = function () {
+        dispatch(resetMessagesThunk());
         setToken();
     }
 
@@ -78,13 +80,8 @@ const UserBadge = ({ setChangeTheme, navBarRoot, setToken, user, className }) =>
                 ariaHideApp={false}
             >
                 <ul className={classNames("cnUserBadgeProfileMenu", `${user.theme === 'dark' && 'cnUserBadgeProfileMenuDark'}`)}>
-                    {/* <li>Change theme</li> */}
                     <li>
                         <span onClick={changeTheme} className={classNames('cnUserBadgeTheme', `${user.theme === 'dark' && 'cnUserBadgeThemeDark'}`)}>Change theme</span>
-                        {/* <label className='cnUserBadgeSwitchThemeLabel'>
-                            <input type="checkbox" className='cnUserBadgeSwitchTheme'  />
-                            <span className='cnUserBadgeSlider'></span>
-                        </label> */}
                     </li>
                     <li onClick={() => { localStorage.removeItem('token'); refreshPage() }} className={classNames(`${user.theme === 'dark' && 'cnUserBadgeThemeDark'}`)} >Exit</li>
                 </ul>

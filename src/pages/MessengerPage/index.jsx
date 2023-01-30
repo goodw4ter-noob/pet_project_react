@@ -1,22 +1,21 @@
-import classNames from 'classnames'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
 import { getMessagesThunk } from '../../../redux/actions/messages'
 import { getFriendThunk } from '../../../redux/actions/users'
 import Layout from '../../components/Layout'
 import Messenger from '../../components/Messenger'
 import './style.css'
 
-const MessengerPage = ({ isAuthenticated }) => {
+const MessengerPage = ({ setToken, isAuthenticated }) => {
     const authedUser = useSelector(state => state.users.authorizedUser);
     const friends = useSelector(state => state.users.friends);
     const dispatch = useDispatch();
     const token = localStorage.getItem('token');
     const [isMessages, setIsMessages] = useState(false);
-    
+    const [friendId, setFriendId] = useState();
+    const [chatId, setChatId] = useState();
 
     useEffect(() => {
         authedUser.friends.forEach(id => {
@@ -34,11 +33,13 @@ const MessengerPage = ({ isAuthenticated }) => {
         console.log(id);
         await dispatch(getMessagesThunk(id, token));
         setIsMessages(!isMessages);
+        setFriendId(friendId);
+        setChatId(id);
     };
 
     return (
-        <Layout className={'cnLayoutCenter'} user={authedUser} isAuthenticated={isAuthenticated}>
-            <Messenger authedUser={authedUser} isMessages={isMessages} getMessages={getMessages} friends={friends} />
+        <Layout setToken={setToken} className={'cnLayoutCenter'} user={authedUser} isAuthenticated={isAuthenticated}>
+            <Messenger setIsMessages={setIsMessages} chatId={chatId} friendId={friendId} authedUser={authedUser} isMessages={isMessages} getMessages={getMessages} friends={friends} />
         </Layout>
     );
 }

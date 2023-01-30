@@ -39,7 +39,7 @@ const StartPage = ({ setToken }) => {
 	return (
 		<div className='cnStartPageRoot'>
 			<Layout user={user} handleValues={handleValues} isAuthenticated={isAuthenticated}>
-				StartPage
+				
 			</Layout>
 		</div>
 	)
